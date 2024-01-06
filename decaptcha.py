@@ -64,7 +64,7 @@ def process_squares(squares, server_url, prompt):
             logging.error("Invalid JSON response for square %d", i)
             continue
 
-        description = jsonData.get("content", "").split(".")[0].lower()
+        description = jsonData.get("content", "")
         logging.info("Square %d: %s", i, description)
 
         if "1" in description:
